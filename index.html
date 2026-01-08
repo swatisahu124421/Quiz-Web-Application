@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HOME SCREEN -->
+<div id="home" class="screen active">
+  <h1>Quiz Portal</h1>
+  <p>Test your knowledge with our modern quiz system!</p>
+  <button class="btn" onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="quiz" class="screen">
+  <div class="top-bar">
+    <span id="progress">Q 1 / 15</span>
+    <span id="timer">30s</span>
+  </div>
+
+  <h2 id="question"></h2>
+  <div id="options"></div>
+
+  <button id="nextBtn" class="btn" onclick="nextQuestion()">Next Question</button>
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="result" class="screen">
+  <h1>Quiz Result</h1>
+  <p>Total Questions: <b id="totalQ"></b></p>
+  <p>Attempted: <b id="attemptQ"></b></p>
+  <p>Correct: <b id="correctQ"></b></p>
+  <p>Wrong: <b id="wrongQ"></b></p>
+  <p>Score: <b id="percent"></b>%</p>
+  <p>Time Taken: <b id="time"></b>s</p>
+  <h2 id="message"></h2>
+
+  <button class="btn" onclick="restartQuiz()">Restart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
